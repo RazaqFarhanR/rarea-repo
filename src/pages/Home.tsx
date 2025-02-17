@@ -34,7 +34,7 @@ function App() {
 
       <div className="px-8 lg:px-52 lg:my-12">
         <h1 className="text-2xl lg:text-4xl font-azaret font-semibold text-white">Languages & Tools</h1>
-        <div className="bg-[#16213E] w-full flex justify-center flex-wrap p-2 gap-4 border-4 rounded-xl mt-2 lg:justify-center lg:gap-[10px]">
+        <div className="bg-[#16213E] w-full flex justify-center flex-wrap p-2 gap-3 border-4 rounded-xl mt-2 lg:!px-0 lg:gap-[6px]">
           <Icon name="windows" className="w-8 h-8 lg:w-[52px] lg:h-[52px]"/>
           <Icon name="ubuntu" className="w-8 h-8 lg:w-[52px] lg:h-[52px]"/>
           <Icon name="nginx" className="w-8 h-8 lg:w-[52px] lg:h-[52px]"/>
