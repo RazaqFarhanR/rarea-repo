@@ -9,7 +9,7 @@ function App() {
       <header className='w-full flex justify-between items-center px-4 py-2 lg:px-16 lg:py-5'>
         <h1 className='text-white font-azaret text-3xl lg:text-5xl'>HanR</h1>
         <nav className="flex space-x-4">
-          <Link to="/home" className="text-white font-azaret text-lg lg:text-2xl list-none">Home</Link>
+          <Link to="/" className="text-white font-azaret text-lg lg:text-2xl list-none">Home</Link>
           <Link to="/sandbox" className="text-white font-azaret text-lg lg:text-2xl list-none">Sandbox</Link>
         </nav>
       </header>
