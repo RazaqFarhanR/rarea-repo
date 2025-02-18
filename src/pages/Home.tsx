@@ -103,6 +103,37 @@ function App() {
 
       <div className="px-8 lg:px-52 my-12">
         <h1 className="text-2xl lg:text-4xl font-azaret font-semibold text-white">The Journey so Far</h1>
+        <div className="grid gap-4 h-max">
+          {(() => {
+            let rows = [];
+            for (let i = 0; i < 6; i++) {
+              if (i%2!=0) {
+                rows.push(
+                  <div className="z-10 grid grid-cols-9 gap-2">
+                    <div className="col-start-5 bg-green-200">
+      
+                    </div>
+                    <div className="col-span-4 col-end-10 bg-red-200 h-32 rounded-lg">
+      
+                    </div>
+                  </div>
+                );
+              } else {
+                rows.push(
+                  <div className="z-10 grid grid-cols-9 gap-2">
+                    <div className="col-span-4 bg-red-200 h-32 rounded-lg">
+
+                    </div>
+                    <div className="bg-green-200">
+
+                    </div>
+                  </div>
+                )
+              }
+            }
+            return rows;
+          })()}
+        </div>
       </div>
 
       <div className="flex justify-center py-2 lg:py-4 border-t-2 border-white">
