@@ -2,8 +2,42 @@ import room from "../assets/room.gif"
 import Icon from "../components/Icon"
 import Project from "../assets/project.png"
 import { Link } from "react-router-dom";
+import "./Home.css"
+import { useEffect, useRef, useState } from "react";
 
 function App() {
+  const imgRef = useRef<HTMLImageElement>(null);
+  const titleRef = useRef<HTMLHeadingElement>(null);
+  const descriptionRef = useRef<HTMLDivElement>(null);
+  const tagRef = useRef<HTMLDivElement>(null);
+
+  const [totalHeight, setTotalHeight] = useState<number>(0);
+
+  useEffect(() => {
+    function calculateTotalHeight() {
+      const imgHeight = imgRef.current?.offsetHeight || 0;
+      const titleHeight = titleRef.current?.offsetHeight || 0;
+      const descriptionHeight = descriptionRef.current?.offsetHeight || 0;
+      const tagHeight = tagRef.current?.offsetHeight || 0;
+
+      const total = imgHeight + titleHeight + descriptionHeight + tagHeight + 75;
+      setTotalHeight(total);
+
+      console.log("Image Height:", imgHeight);
+      console.log("Title Height:", titleHeight);
+      console.log("Description Height:", descriptionHeight);
+      console.log("Tag Height:", tagHeight);
+      console.log("Total Height:", total);
+    }
+
+    calculateTotalHeight(); // Hitung saat pertama kali dimuat
+    window.addEventListener("resize", calculateTotalHeight); // Update saat resize
+
+    return () => {
+      window.removeEventListener("resize", calculateTotalHeight); // Cleanup event listener
+    };
+  }, []);
+
   return (
     <div className='bg-[#1A1A2E] w-full min-h-screen h-auto'>
       <header className='w-full flex justify-between items-center m-auto max-w-[172ch] px-8 py-2 lg:py-5'>
@@ -61,44 +95,70 @@ function App() {
         <div className="my-12">
           <h1 className="text-2xl lg:text-4xl font-azaret font-semibold text-white">Featured Projects</h1>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-4">
-            <div className="p-3 w-[100%] bg-[#16213E] rounded-xl">
-              <img className="w-full" src={Project} alt="project-img"/>
-              <div className="">
-                <h1 className="text-2xl text-white font-azaret font-bold mt-2">Project 1</h1>
-                <div className="mt-4 h-16 text-ellipsis overflow-hidden">
-                  <p className="text-white text-sm font-azaret leading-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            <div className="card-container" style={{height:totalHeight}}>
+              <div className="card bg-[#16213E] rounded-xl" >
+                <div className="card-front p-3">
+                  <img className="w-full" src={Project} alt="project-img" ref={imgRef}/>
+                  <div className="">
+                    <h1 ref={titleRef} className="text-2xl text-white font-azaret font-bold mt-2">Project 1</h1>
+                    <div ref={descriptionRef} className="mt-4 h-16 text-ellipsis overflow-hidden">
+                      <p className="text-white text-sm font-azaret leading-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                    <div ref={tagRef} className="mt-4 grid grid-cols">
+                      <p className="bg-[#E94560] py-1 px-6 w-fit rounded-full text-[#1A1A2E] font-bold text-base">React</p>
+                    </div>
+                  </div>
                 </div>
-                <div className="mt-4 grid grid-cols">
-                  <p className="bg-[#E94560] py-1 px-6 w-fit rounded-full text-[#1A1A2E] font-bold text-base">React</p>
+                
+                <div className="card-back">
+
                 </div>
               </div>
             </div>
             
-            <div className="p-3 w-[100%] bg-[#16213E] rounded-xl">
-              <img className="w-full" src={Project} alt="project-img"/>
-              <div className="">
-                <h1 className="text-2xl text-white font-azaret font-bold mt-2">Project 1</h1>
-                <div className="mt-4 h-16 text-ellipsis overflow-hidden">
-                  <p className="text-white text-sm font-azaret leading-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <div className="card-container">
+              <div className="card bg-[#16213E] rounded-xl">
+                <div className="card-front p-3">
+                  <img className="w-full" src={Project} alt="project-img"/>
+                  <div className="">
+                    <h1 className="text-2xl text-white font-azaret font-bold mt-2">Project 1</h1>
+                    <div className="mt-4 h-16 text-ellipsis overflow-hidden">
+                      <p className="text-white text-sm font-azaret leading-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                    <div className="mt-4 grid grid-cols">
+                      <p className="bg-[#E94560] py-1 px-6 w-fit rounded-full text-[#1A1A2E] font-bold text-base">React</p>
+                    </div>
+                  </div>
                 </div>
-                <div className="mt-4 grid grid-cols">
-                  <p className="bg-[#E94560] py-1 px-6 w-fit rounded-full text-[#1A1A2E] font-bold text-base">React</p>
+                
+                <div className="card-back">
+
                 </div>
               </div>
             </div>
 
-            <div className="p-3 w-[100%] bg-[#16213E] rounded-xl">
-              <img className="w-full" src={Project} alt="project-img"/>
-              <div className="">
-                <h1 className="text-2xl text-white font-azaret font-bold mt-2">Project 1</h1>
-                <div className="mt-4 h-16 text-ellipsis overflow-hidden">
-                  <p className="text-white text-sm font-azaret leading-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <div className="card-container">
+              <div className="card bg-[#16213E] rounded-xl">
+                <div className="card-front p-3">
+                  <img className="w-full" src={Project} alt="project-img"/>
+                  <div className="">
+                    <h1 className="text-2xl text-white font-azaret font-bold mt-2">Project 1</h1>
+                    <div className="mt-4 h-16 text-ellipsis overflow-hidden">
+                      <p className="text-white text-sm font-azaret leading-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                    <div className="mt-4 grid grid-cols">
+                      <p className="bg-[#E94560] py-1 px-6 w-fit rounded-full text-[#1A1A2E] font-bold text-base">React</p>
+                    </div>
+                  </div>
                 </div>
-                <div className="mt-4 grid grid-cols">
-                  <p className="bg-[#E94560] py-1 px-6 w-fit rounded-full text-[#1A1A2E] font-bold text-base">React</p>
+                
+                <div className="card-back">
+
                 </div>
               </div>
             </div>
+            x
           </div>
         </div>
 
