@@ -20,7 +20,7 @@ function App() {
       const descriptionHeight = descriptionRef.current?.offsetHeight || 0;
       const tagHeight = tagRef.current?.offsetHeight || 0;
 
-      const total = imgHeight + titleHeight + descriptionHeight + tagHeight + 75;
+      const total = imgHeight + titleHeight + descriptionHeight + tagHeight + 65;
       setTotalHeight(total);
 
       console.log("Image Height:", imgHeight);
@@ -158,7 +158,6 @@ function App() {
                 </div>
               </div>
             </div>
-            x
           </div>
         </div>
 
@@ -171,20 +170,38 @@ function App() {
                 if (i%2!=0) {
                   rows.push(
                     <div className="z-10 relative flex justify-end">
-                      <div className="w-[56%] h-32 flex justify-end">
-                        <div className="bg-red-100 w-[78%] h-full rounded-xl">
-
-                        </div>
+                      <div className="w-[56%] flex justify-end">
+                        <div className="bg-[#16213E] w-[78%] h-full rounded-xl flex flex-row-reverse p-3 justify-between">
+                          <div className="text-right w-[70%]">
+                            <h1 className="text-white font-azaret text-xl font-bold">Software Engineering Students</h1>
+                            <h2 className="font-azaret text-sm font-bold text-[#E94560]">Telkom Malang Vocational High School</h2>
+                            <div className="text-sm text-white font-semibold my-2 text-ellipsis h-14 overflow-hidden ">
+                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+                            <p className="text-white font-azaret">Jan 2020 - Apr 2023</p>
+                          </div>
+                          <div className="w-[30%] bg-red-50">
+                          </div> 
+                        </div>   
                       </div>
                     </div>
                   );
                 } else {
                   rows.push(
                     <div className="z-10 relative flex justify-start">
-                      <div className="w-[56%] h-32 flex justify-start">
-                        <div className="bg-red-100 w-[78%] h-full rounded-xl">
-
-                        </div>
+                      <div className="w-[56%] flex justify-start">
+                        <div className="bg-[#16213E] w-[78%] h-full rounded-xl flex p-3 justify-between">
+                          <div className="w-[70%]">
+                            <h1 className="text-white font-azaret text-xl font-bold">Software Engineering Students</h1>
+                            <h2 className="font-azaret text-sm font-bold text-[#E94560]">Telkom Malang Vocational High School</h2>
+                            <div className="text-sm text-white font-semibold my-2 text-ellipsis h-14 overflow-hidden ">
+                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+                            <p className="text-white font-azaret">Jan 2020 - Apr 2023</p>
+                          </div>
+                          <div className="w-[30%] bg-red-50">
+                          </div> 
+                        </div>   
                       </div>
                     </div>
                   )
