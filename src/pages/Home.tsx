@@ -117,7 +117,7 @@ function App() {
               </div>
             </div>
             
-            <div className="card-container">
+            <div className="card-container" style={{height:totalHeight}}>
               <div className="card bg-[#16213E] rounded-xl">
                 <div className="card-front p-3">
                   <img className="w-full" src={Project} alt="project-img"/>
@@ -138,7 +138,7 @@ function App() {
               </div>
             </div>
 
-            <div className="card-container">
+            <div className="card-container" style={{height:totalHeight}}>
               <div className="card bg-[#16213E] rounded-xl">
                 <div className="card-front p-3">
                   <img className="w-full" src={Project} alt="project-img"/>
