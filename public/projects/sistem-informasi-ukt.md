@@ -1,33 +1,33 @@
-## Ringkasan
+## Summary
 
-Platform manajemen ujian terintegrasi yang dirancang khusus untuk memfasilitasi proses evaluasi dan kenaikan sabuk/tingkat (UKT) pada organisasi pencak silat. Aplikasi ini mendigitalisasi seluruh aspek ujian, mulai dari pendaftaran peserta, pengelolaan soal teori, penilaian praktik/fisik secara real-time, hingga rekapitulasi nilai dan pencetakan hasil akhir. Sistem ini dirancang untuk menangani struktur organisasi yang berjenjang (Pusat/Cabang, Ranting, dan Rayon).
+An integrated exam management platform designed to facilitate the evaluation and belt/level promotion process (UKT) for a Pencak Silat organization. The application digitizes all aspects of the examination, from participant registration, theory question management, real-time practical/physical scoring, to result tabulation and final score printing. The system was designed to handle a tiered organizational structure (Central/Branch, Sub-branch, and Chapter).
 
-**Peran:** Full-Stack Developer
-
----
-
-## Tantangan
-
-Proses ujian kenaikan tingkat pencak silat melibatkan banyak pihak (admin, pengurus cabang, penguji di lapangan, dan ratusan peserta) yang bekerja secara simultan di lokasi yang berbeda. Penilaian praktik memiliki banyak parameter spesifik (Senam, Jurus, Fisik, Teknik, Sambung, Toya, Belati, Kripen) yang sebelumnya dicatat di kertas, sehingga rawan kesalahan dan membutuhkan waktu rekapitulasi yang sangat lama. Diperlukan sistem yang dapat menyinkronkan data penilaian secara instan antara penguji di lapangan dan pengurus di meja pusat.
+**Role:** Full-Stack Developer
 
 ---
 
-## Arsitektur dan Pendekatan
+## Challenges
 
-Sistem dibangun dengan arsitektur full-stack yang memisahkan frontend dan backend secara jelas:
-
-- **Frontend (Next.js & React)** — Antarmuka pengguna interaktif yang responsif di berbagai perangkat, baik laptop untuk pengurus maupun tablet untuk penguji di lapangan.
-- **Backend (Express & Sequelize ORM)** — API yang tangguh dengan sistem autentikasi multi-role menggunakan JWT untuk 4 entitas pengguna: Admin, Pengurus, Penguji, dan Siswa.
-- **Real-time Sync (Socket.io)** — Sinkronisasi data penilaian secara instan antara penguji di lapangan dan pengurus di meja pusat.
+The Pencak Silat belt promotion exam process involves many parties—admin, branch management, field examiners, and hundreds of participants—all working simultaneously at different locations. Practical assessment involves many specific parameters (Senam, Jurus, Physical, Technique, Sparring, Staff, Dagger, Kris) that were previously recorded on paper, making them error-prone and requiring a very long tabulation time. A system was needed that could instantly synchronize assessment data between field examiners and central management.
 
 ---
 
-## Fitur Utama
+## Architecture and Approach
 
-- **Manajemen Peran & Akses (RBAC):** Sistem multi-role yang aman untuk Admin, Pengurus (manajemen cabang/ranting), Penguji (penilaian lapangan), dan Siswa (peserta ujian).
-- **Digitalisasi Penilaian Teori & Praktik:** Modul ujian teori (soal, kunci jawaban, kalkulasi otomatis) dan modul penilaian praktik komprehensif dengan parameter spesifik seni bela diri.
-- **Pemrosesan Data Massal:** Fitur import dan export data siswa dalam jumlah besar menggunakan format CSV & Excel, memangkas waktu entri data manual secara drastis.
-- **Monitoring Real-time:** Sinkronisasi data penilaian secara instan antara penguji dan pengurus menggunakan Socket.io.
+The system was built with a full-stack architecture that clearly separates the frontend and backend:
+
+- **Frontend (Next.js & React)** — An interactive, responsive user interface on various devices, from laptops for management to tablets for field examiners.
+- **Backend (Express & Sequelize ORM)** — A robust API with a multi-role authentication system using JWT for 4 user entities: Admin, Management, Examiner, and Student.
+- **Real-time Sync (Socket.io)** — Instant synchronization of assessment data between field examiners and central management.
+
+---
+
+## Key Features
+
+- **Role & Access Management (RBAC):** A secure multi-role system for Admin, Management (branch/sub-branch), Examiners (field assessment), and Students (exam participants).
+- **Theory & Practical Assessment Digitization:** A theory exam module (questions, answer keys, automatic calculation) and a comprehensive practical assessment module with martial arts-specific parameters.
+- **Bulk Data Processing:** Import and export of large student datasets using CSV & Excel formats, drastically cutting manual data entry time.
+- **Real-time Monitoring:** Instant assessment data synchronization between examiners and management using Socket.io.
 
 ---
 
@@ -36,11 +36,11 @@ Sistem dibangun dengan arsitektur full-stack yang memisahkan frontend dan backen
 - **Frontend:** Next.js 13, Tailwind CSS, Axios, React ApexCharts
 - **Backend:** Node.js, Express.js, Sequelize ORM, Socket.io
 - **Database:** MySQL
-- **Keamanan:** JWT, Bcrypt
+- **Security:** JWT, Bcrypt
 - **Tools:** Multer, ExcelJS, CSV Parser, jsPDF
 
 ---
 
-## Hasil dan Dampak
+## Results and Impact
 
-Sistem ini berhasil mendigitalisasi seluruh proses ujian kenaikan tingkat yang sebelumnya memakan waktu berhari-hari untuk rekapitulasi menjadi proses yang hampir instan. Fitur monitoring real-time menghilangkan kebutuhan untuk menunggu semua penguji selesai sebelum melihat hasil, dan fitur export PDF memungkinkan pencetakan sertifikat langsung setelah ujian selesai.
+The system successfully digitized the entire belt promotion exam process, reducing what previously took days to tabulate into a near-instant process. The real-time monitoring feature eliminated the need to wait for all examiners to finish before viewing results, and the PDF export feature enabled certificate printing immediately after the examination concluded.

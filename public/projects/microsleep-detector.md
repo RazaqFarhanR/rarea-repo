@@ -1,34 +1,34 @@
-## Ringkasan
+## Summary
 
-Proyek full-stack yang menggabungkan aplikasi web, aplikasi mobile, dan perangkat Internet of Things (IoT) untuk mendeteksi pengemudi yang mengalami microsleep. Sistem ini dirancang untuk memberikan peringatan dini secara real-time guna mencegah kecelakaan yang disebabkan oleh kantuk saat berkendara.
+A full-stack project combining a web application, mobile application, and Internet of Things (IoT) devices to detect drivers experiencing microsleep. The system is designed to deliver real-time early warnings to prevent accidents caused by drowsiness while driving.
 
-**Peran:** Full-Stack Backend & Mobile Developer
-
----
-
-## Tantangan
-
-Salah satu tantangan terbesar adalah bagaimana memastikan data sensor dari perangkat keras IoT (kamera/sensor pada kendaraan) dapat dikirimkan dan diproses secara real-time ke server, lalu diteruskan ke aplikasi seluler pengemudi atau dashboard web administrator tanpa delay yang berarti. Dalam konteks keselamatan berkendara, keterlambatan sepersekian detik saja bisa berakibat fatal.
+**Role:** Full-Stack Backend & Mobile Developer
 
 ---
 
-## Arsitektur dan Pendekatan
+## Challenges
 
-Untuk mengatasi tantangan latensi, dipilih **Protokol MQTT** yang jauh lebih ringan dan cepat dibandingkan HTTP konvensional untuk lalu lintas data sensor IoT. Arsitektur sistem terdiri dari empat komponen utama:
-
-1. **Hardware (IoT)** — Mengirimkan data telemetri mata pengemudi secara streaming via MQTT.
-2. **Backend API** — Dibangun menggunakan ExpressJS dan database MySQL untuk menampung log deteksi, menyimpan profil pengemudi, dan mengelola routing data.
-3. **Frontend Web** — Dashboard admin berbasis ReactJS untuk memantau status armada kendaraan secara keseluruhan.
-4. **Aplikasi Mobile** — Aplikasi peringatan berbasis React Native yang terpasang di smartphone pengemudi, yang akan membunyikan alarm keras saat sinyal bahaya diterima dari server.
+One of the biggest challenges was ensuring that sensor data from the IoT hardware (a camera/sensor mounted on the vehicle) could be transmitted and processed in real-time to the server, then forwarded to the driver's mobile app or the administrator's web dashboard without any meaningful delay. In the context of driving safety, even a fraction-of-a-second delay could be fatal.
 
 ---
 
-## Fitur Utama
+## Architecture and Approach
 
-- **Deteksi Real-time via MQTT:** Streaming data telemetri dari sensor ke server menggunakan protokol ringan untuk memastikan latensi minimal.
-- **Dashboard Monitoring Armada:** Panel admin berbasis web untuk memantau status seluruh kendaraan dan riwayat kejadian microsleep.
-- **Alarm Mobile Otomatis:** Aplikasi mobile yang langsung membunyikan peringatan keras saat sinyal deteksi microsleep diterima.
-- **Logging & Analisis:** Pencatatan seluruh kejadian deteksi untuk keperluan analisis pola dan pelaporan.
+To overcome the latency challenge, **MQTT Protocol** was chosen—far lighter and faster than conventional HTTP—for IoT sensor data traffic. The system architecture consists of four main components:
+
+1. **Hardware (IoT)** — Streams driver eye telemetry data via MQTT.
+2. **Backend API** — Built with ExpressJS and a MySQL database to store detection logs, save driver profiles, and manage data routing.
+3. **Web Frontend** — A ReactJS-based admin dashboard for monitoring the overall fleet status.
+4. **Mobile App** — A React Native alert application installed on the driver's smartphone that triggers a loud alarm when a danger signal is received from the server.
+
+---
+
+## Key Features
+
+- **Real-time Detection via MQTT:** Streaming telemetry data from sensors to the server using a lightweight protocol to ensure minimal latency.
+- **Fleet Monitoring Dashboard:** A web-based admin panel to monitor the status of all vehicles and microsleep incident history.
+- **Automatic Mobile Alarm:** A mobile app that immediately sounds a loud alert when a microsleep detection signal is received.
+- **Logging & Analysis:** Recording all detection events for pattern analysis and reporting purposes.
 
 ---
 
@@ -36,12 +36,12 @@ Untuk mengatasi tantangan latensi, dipilih **Protokol MQTT** yang jauh lebih rin
 
 - **Backend:** Node.js, ExpressJS
 - **Database:** MySQL
-- **Frontend Web:** ReactJS
+- **Web Frontend:** ReactJS
 - **Mobile App:** React Native
 - **IoT Protocol:** MQTT
 
 ---
 
-## Hasil dan Dampak
+## Results and Impact
 
-Sistem ini berhasil mengurangi rata-rata waktu respon (latensi) pengiriman peringatan dari sensor ke aplikasi mobile hingga di bawah 200ms, menjadikannya sistem deteksi yang andal untuk digunakan secara real-time. Arsitektur berbasis MQTT terbukti jauh lebih efisien dibandingkan polling HTTP untuk kasus penggunaan IoT berfrekuensi tinggi.
+The system successfully reduced the average alert delivery latency—from sensor to mobile app—to under 200ms, making it a reliable detection system for real-time use. The MQTT-based architecture proved far more efficient than HTTP polling for high-frequency IoT use cases.

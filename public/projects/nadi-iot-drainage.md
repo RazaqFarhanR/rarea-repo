@@ -1,49 +1,49 @@
-## Ringkasan
+## Summary
 
-Sistem perangkat keras cerdas berbasis Internet of Things (IoT) menggunakan ESP32-CAM untuk memantau kapasitas tata air (drainase) dan mendeteksi potensi banjir secara real-time. Sistem ini mengintegrasikan pembacaan multi-sensor dengan kapabilitas tangkapan visual, dan mengirimkan paket data telemetri ke backend menggunakan protokol MQTT dan HTTP.
+An intelligent IoT hardware system based on an ESP32-CAM, designed to monitor drainage water capacity and detect potential flooding in real-time. The system integrates multi-sensor readings with visual capture capabilities, transmitting telemetry data packets to a backend using MQTT and HTTP protocols.
 
-**Peran:** IoT Engineer
-
----
-
-## Tantangan
-
-Sistem pemantauan drainase konvensional hanya mengandalkan data angka ketinggian air, yang seringkali menghasilkan false alarm (alarm palsu) karena tidak ada bukti visual untuk memvalidasi kondisi sebenarnya. Selain itu, perangkat pemantauan di lapangan harus mampu beroperasi secara otonom di lokasi tanpa akses listrik (off-grid), sehingga diperlukan integrasi panel surya (solar panel) dan strategi manajemen daya yang cerdas.
+**Role:** IoT Engineer
 
 ---
 
-## Arsitektur dan Pendekatan
+## Challenges
 
-Firmware dibangun dengan arsitektur Clean Architecture dan pola desain State Machine yang dinamis, meliputi empat mode operasi:
-
-- **Commissioning** — Mode konfigurasi awal melalui Captive Portal untuk setup WiFi dan URL backend.
-- **Operational** — Mode operasional utama dengan pembacaan sensor, capture kamera, dan transmisi data.
-- **Maintenance** — Mode pemeliharaan untuk kalibrasi dan diagnostik.
-- **Offline** — Mode hemat daya saat konektivitas tidak tersedia.
-
-Pemisahan logika ini membuat firmware lebih tangguh dan mudah dipelihara. Algoritma interval dinamis mendayagunakan mode Deep Sleep mikrokontroler, menyesuaikan frekuensi wake-up berdasarkan kondisi cuaca (lebih sering aktif saat hujan) untuk mengoptimalkan efisiensi suplai daya dari solar panel.
+Conventional drainage monitoring systems rely solely on numerical water level data, which often produces false alarms because there is no visual evidence to validate the actual conditions. Additionally, field monitoring devices must be capable of operating autonomously in locations without grid power (off-grid), requiring the integration of a solar panel and a smart power management strategy.
 
 ---
 
-## Fitur Utama
+## Architecture and Approach
 
-- **Telemetri & Kompresi Visual:** Pembacaan presisi terhadap level air dan status curah hujan, sekaligus capture dan kompresi gambar JPEG untuk validasi visual kondisi drainase.
-- **Manajemen Daya & Tenaga Surya:** Algoritma Deep Sleep dinamis yang bekerja sama dengan sistem suplai daya panel surya (solar panel) untuk memastikan perangkat beroperasi non-stop secara otonom.
-- **Portal Konfigurasi Mandiri (Captive Portal):** Web Server lokal di dalam ESP32-CAM menggunakan HTML/JS dan WebSockets, memungkinkan teknisi di lapangan mengkalibrasi alat dan mengatur kredensial tanpa proses flashing ulang.
-- **Komunikasi Multi-protokol:** Transmisi data menggunakan MQTT (untuk telemetri real-time) dan HTTP (untuk pengiriman gambar).
+The firmware was built with a Clean Architecture and a dynamic State Machine design pattern, covering four operating modes:
+
+- **Commissioning** — Initial configuration mode via a Captive Portal for WiFi and backend URL setup.
+- **Operational** — The primary operational mode with sensor readings, camera capture, and data transmission.
+- **Maintenance** — A maintenance mode for calibration and diagnostics.
+- **Offline** — A low-power mode when connectivity is unavailable.
+
+This separation of logic makes the firmware more robust and easier to maintain. A dynamic interval algorithm leverages the microcontroller's Deep Sleep mode, adjusting wake-up frequency based on weather conditions (waking up more frequently during rain) to optimize power efficiency from the solar panel supply.
+
+---
+
+## Key Features
+
+- **Telemetry & Visual Compression:** Precise readings of water level and rainfall status, alongside JPEG image capture and compression for visual validation of drainage conditions.
+- **Power Management & Solar Energy:** A dynamic Deep Sleep algorithm working in tandem with the solar panel power supply system to ensure non-stop autonomous operation.
+- **Self-Configuration Portal (Captive Portal):** A local web server inside the ESP32-CAM using HTML/JS and WebSockets, allowing field technicians to calibrate the device and set credentials without any re-flashing.
+- **Multi-Protocol Communication:** Data transmission using MQTT (for real-time telemetry) and HTTP (for image delivery).
 
 ---
 
 ## Tech Stack
 
-- **Mikrokontroler:** ESP32-CAM (AI-Thinker), OV2640 Camera
-- **Sensor:** Waterproof Ultrasonic Sensor (AJ-SR04M), Rain Sensor
-- **Power Supply:** Solar Panel (Tenaga Surya)
-- **Bahasa & Framework:** C++ (Arduino Framework), PlatformIO
-- **Protokol:** WiFi, MQTT (JSON Payload), HTTP
+- **Microcontroller:** ESP32-CAM (AI-Thinker), OV2640 Camera
+- **Sensors:** Waterproof Ultrasonic Sensor (AJ-SR04M), Rain Sensor
+- **Power Supply:** Solar Panel
+- **Language & Framework:** C++ (Arduino Framework), PlatformIO
+- **Protocols:** WiFi, MQTT (JSON Payload), HTTP
 
 ---
 
-## Hasil dan Dampak
+## Results and Impact
 
-Perangkat ini menghasilkan sistem pemantauan infrastruktur tata air jarak jauh yang cost-effective dan otonom. Adanya bukti foto real-time yang menyertai data angka ketinggian air berhasil menghilangkan false alarm, sehingga mempercepat respons dan pengambilan keputusan terkait peringatan dini banjir.
+The device produced a cost-effective and autonomous remote water infrastructure monitoring system. The addition of real-time photographic evidence accompanying numerical water level data successfully eliminated false alarms, thereby accelerating the response and decision-making process for early flood warnings.

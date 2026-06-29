@@ -1,36 +1,36 @@
-## Ringkasan
+## Summary
 
-Aplikasi e-commerce cross-platform yang dirancang untuk mempermudah pengalaman belanja dan manajemen toko secara digital. Aplikasi ini memiliki dua antarmuka terpisah untuk Pelanggan dan Pemilik Toko (Admin), dilengkapi dengan fitur chatbot cerdas berbasis AI dan sistem live chat customer service. Proyek ini dikembangkan sebagai bentuk implementasi praktis untuk memenuhi capaian pembelajaran mata kuliah, sekaligus mendemonstrasikan penguasaan standar pengembangan aplikasi tingkat industri.
+A cross-platform e-commerce application designed to simplify the online shopping and store management experience. The app features two separate interfaces for Customers and Store Owners (Admin), complete with an AI-powered smart chatbot and a live customer service chat system. This project was developed as a practical implementation to fulfill a course's learning outcomes, while simultaneously demonstrating mastery of industry-standard application development practices.
 
-**Peran:** Mobile Developer
-
----
-
-## Tantangan
-
-Membangun aplikasi mobile e-commerce yang lengkap dengan dua antarmuka terpisah (Customer dan Admin) yang harus tetap responsif dan intuitif. Selain itu, diperlukan integrasi layanan AI untuk menghadirkan chatbot yang mampu menjawab pertanyaan pelanggan secara otomatis 24/7, serta sistem chat real-time antara pelanggan dan customer service.
+**Role:** Mobile Developer
 
 ---
 
-## Arsitektur dan Pendekatan
+## Challenges
 
-Aplikasi dibangun menggunakan Flutter sebagai framework cross-platform, dengan Firebase sebagai backend yang menyediakan database real-time (Cloud Firestore), autentikasi, dan penyimpanan file. Arsitektur aplikasi memisahkan modul Customer dan Admin secara jelas, dengan shared services untuk komponen yang digunakan bersama.
-
-Integrasi Google Generative AI (Gemini) memungkinkan chatbot menjawab pertanyaan pelanggan secara natural, sementara Firebase Cloud Messaging memastikan notifikasi push terkirim secara instan ke perangkat pengguna.
+Building a full-featured mobile e-commerce application with two separate interfaces (Customer and Admin) that must remain responsive and intuitive. Additionally, AI service integration was required to deliver a chatbot capable of automatically answering customer questions 24/7, alongside a real-time chat system between customers and customer service.
 
 ---
 
-## Fitur Utama
+## Architecture and Approach
 
-**Aplikasi Pelanggan**
-- **Katalog & Checkout:** Eksplorasi produk, keranjang belanja, checkout, pelacakan pesanan, dan wishlist.
-- **AI Chatbot:** Integrasi Google Generative AI untuk layanan pelanggan otomatis yang cerdas dan responsif.
-- **Manajemen Profil:** Pengaturan akun dan alamat pengiriman.
+The application was built using Flutter as the cross-platform framework, with Firebase as the backend providing a real-time database (Cloud Firestore), authentication, and file storage. The application architecture clearly separates the Customer and Admin modules, with shared services for commonly used components.
 
-**Aplikasi Admin**
-- **Manajemen Produk & Kategori:** Pengelolaan inventaris produk dan kategori secara terstruktur.
-- **Pemrosesan Pesanan:** Manajemen pesanan dari checkout hingga pengiriman.
-- **Konfigurasi Pengiriman:** Manajemen area pengiriman dan metode pickup.
+Google Generative AI (Gemini) integration enables the chatbot to answer customer questions naturally, while Firebase Cloud Messaging ensures push notifications are delivered instantly to user devices.
+
+---
+
+## Key Features
+
+**Customer Application**
+- **Catalog & Checkout:** Product exploration, shopping cart, checkout, order tracking, and wishlist.
+- **AI Chatbot:** Google Generative AI integration for an intelligent and responsive automated customer service.
+- **Profile Management:** Account and shipping address settings.
+
+**Admin Application**
+- **Product & Category Management:** Structured management of product and category inventory.
+- **Order Processing:** Order management from checkout through to delivery.
+- **Shipping Configuration:** Management of delivery areas and pickup methods.
 
 ---
 
@@ -39,11 +39,11 @@ Integrasi Google Generative AI (Gemini) memungkinkan chatbot menjawab pertanyaan
 - **Frontend:** Flutter (Dart)
 - **Backend & Database:** Firebase (Cloud Firestore, Authentication, Storage)
 - **AI:** Google Generative AI (Gemini)
-- **Notifikasi:** Firebase Cloud Messaging, Awesome Notifications
-- **Keamanan:** Flutter Secure Storage
+- **Notifications:** Firebase Cloud Messaging, Awesome Notifications
+- **Security:** Flutter Secure Storage
 
 ---
 
-## Hasil dan Dampak
+## Results and Impact
 
-Aplikasi ini berhasil menghadirkan pengalaman e-commerce mobile yang komprehensif dengan fitur AI chatbot yang mampu menangani pertanyaan pelanggan secara otomatis. Integrasi Firebase sebagai backend real-time memastikan data pesanan dan chat selalu tersinkronisasi secara instan di seluruh perangkat.
+The application successfully delivered a comprehensive mobile e-commerce experience with an AI chatbot capable of handling customer inquiries automatically. Firebase integration as a real-time backend ensured that order and chat data remained instantly synchronized across all devices.

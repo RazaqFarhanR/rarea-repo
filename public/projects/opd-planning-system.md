@@ -1,32 +1,32 @@
-## Ringkasan
+## Summary
 
-Layanan RESTful API untuk Sistem Informasi Perencanaan yang ditujukan bagi Organisasi Perangkat Daerah (OPD). Sistem ini dirancang untuk mendigitalisasi alur kerja perencanaan program, pemantauan target indikator kinerja secara real-time, serta pengarsipan bukti dan dokumentasi kegiatan secara terpusat, terintegrasi, dan transparan.
+A RESTful API service for a Planning Information System aimed at Regional Government Organizations (OPD). The system is designed to digitize the program planning workflow, real-time performance indicator monitoring, and the centralized, integrated, and transparent archiving of activity evidence and documentation.
 
-**Peran:** Backend Developer
-
----
-
-## Tantangan
-
-Proses perencanaan dan pelaporan kinerja di instansi pemerintah (OPD) sebelumnya dilakukan secara manual dan tersebar di berbagai dokumen terpisah. Hal ini menyulitkan pemantauan progress indikator kinerja secara real-time, rentan terhadap inkonsistensi data, dan mempersulit proses audit karena bukti kegiatan tidak tersentralisasi.
+**Role:** Backend Developer
 
 ---
 
-## Arsitektur dan Pendekatan
+## Challenges
 
-Backend dibangun dengan arsitektur RESTful yang kuat menggunakan TypeScript untuk memastikan type safety dan meminimalisir bug saat runtime. Data disimpan menggunakan MongoDB dengan Mongoose sebagai ORM, yang cocok untuk mengelola hierarki data perencanaan yang fleksibel (Program → Indikator → Metrik Pencapaian).
-
-Sistem autentikasi berbasis JWT mengamankan setiap endpoint, sementara fitur upload multi-file menggunakan Multer memungkinkan pengarsipan bukti kegiatan secara aman dan terstruktur.
+The planning and performance reporting process within government agencies (OPD) was previously handled manually and scattered across various separate documents. This made it difficult to monitor performance indicator progress in real-time, was prone to data inconsistencies, and complicated the audit process because activity evidence was not centralized.
 
 ---
 
-## Fitur Utama
+## Architecture and Approach
 
-- **Manajemen Data Perencanaan:** Pengelolaan hierarki data antara Program Perencanaan, Indikator Kinerja, dan metrik pencapaian (Kuantitatif & Kualitatif).
-- **Sistem Manajemen File:** Fitur upload dan manajemen multi-file untuk dokumentasi bukti kegiatan yang aman dan terstruktur.
-- **Otentikasi & Keamanan:** Sistem autentikasi berbasis JWT dan enkripsi kata sandi menggunakan Bcrypt.
-- **Monitoring & Rekapitulasi:** Endpoint khusus untuk memantau performa dan rekapitulasi penyelesaian indikator kinerja.
-- **Modul Amplifikasi:** Manajemen publikasi hasil kegiatan ke berbagai platform media.
+The backend was built with a robust RESTful architecture using TypeScript to ensure type safety and minimize runtime bugs. Data is stored using MongoDB with Mongoose as the ORM, which is well-suited for managing the flexible hierarchical planning data structure (Program → Indicator → Achievement Metrics).
+
+A JWT-based authentication system secures every endpoint, while the multi-file upload feature using Multer enables the secure and structured archiving of activity evidence.
+
+---
+
+## Key Features
+
+- **Planning Data Management:** Managing the data hierarchy between Planning Programs, Performance Indicators, and achievement metrics (Quantitative & Qualitative).
+- **File Management System:** Multi-file upload and management feature for secure and structured activity evidence documentation.
+- **Authentication & Security:** JWT-based authentication system and password encryption using Bcrypt.
+- **Monitoring & Recapitulation:** Dedicated endpoints for monitoring performance and tracking the completion of performance indicators.
+- **Amplification Module:** Management for publishing activity results to various media platforms.
 
 ---
 
@@ -34,11 +34,11 @@ Sistem autentikasi berbasis JWT mengamankan setiap endpoint, sementara fitur upl
 
 - **Backend:** Node.js, Express.js, TypeScript
 - **Database:** MongoDB (Mongoose)
-- **Keamanan:** JWT, Bcrypt
+- **Security:** JWT, Bcrypt
 - **File Management:** Multer
 
 ---
 
-## Hasil dan Dampak
+## Results and Impact
 
-Sistem ini berhasil menyentralisasi seluruh proses perencanaan dan pelaporan OPD ke dalam satu platform terpadu. Pemantauan indikator kinerja yang sebelumnya memerlukan pengecekan manual ke berbagai dokumen kini dapat dilakukan secara real-time melalui satu endpoint, meningkatkan transparansi dan efisiensi pelaporan secara signifikan.
+The system successfully centralized the entire OPD planning and reporting process into a single unified platform. Performance indicator monitoring, which previously required manually checking multiple documents, can now be done in real-time through a single endpoint, significantly improving reporting transparency and efficiency.

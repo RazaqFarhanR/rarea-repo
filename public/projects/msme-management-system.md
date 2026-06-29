@@ -1,34 +1,33 @@
-## Ringkasan
+## Summary
 
-Platform manajemen bisnis komprehensif yang dirancang khusus untuk Usaha Mikro, Kecil, dan Menengah (UMKM). Sistem ini mendigitalisasi operasional harian mulai dari manajemen stok, pencatatan transaksi penjualan, manajemen keuangan, hingga pelaporan laba/rugi secara otomatis. Dilengkapi dengan aplikasi mobile companion untuk memberikan notifikasi real-time kepada pemilik usaha. Proyek ini dikembangkan sebagai bagian dari pemenuhan tugas akhir mata kuliah dengan mengadopsi standar arsitektur perangkat lunak tingkat produksi (production-grade).
+A comprehensive business management platform designed specifically for Micro, Small, and Medium Enterprises (MSMEs). The system digitizes daily operations ranging from stock management, sales transaction recording, financial management, to automatic profit/loss reporting. It is paired with a mobile companion app to deliver real-time notifications to business owners. This project was developed as a course final assignment while adopting production-grade software architecture standards.
 
-**Peran:** Full-Stack Laravel & Mobile Developer
-
----
-
-## Tantangan
-
-Banyak pelaku UMKM yang masih mengelola stok, transaksi, dan keuangan secara manual — menggunakan catatan kertas atau spreadsheet yang tidak terintegrasi. Hal ini menyebabkan ketidakakuratan data stok, kesulitan dalam melacak laba/rugi, dan tidak adanya peringatan dini saat stok barang menipis. Diperlukan sistem terintegrasi yang menghubungkan dashboard web admin dengan notifikasi mobile secara real-time.
+**Role:** Full-Stack Laravel & Mobile Developer
 
 ---
 
-## Arsitektur dan Pendekatan
+## Challenges
 
-Sistem dibangun dengan dua komponen utama yang saling terhubung:
-
-- **Web Application (Laravel)** — Backend RESTful API dan dashboard admin menggunakan Laravel 12 dengan Laravel Blade dan template AdminLTE. Semua logika bisnis (stok, transaksi, keuangan) diproses di sisi server.
-- **Mobile Companion (Flutter)** — Aplikasi mobile ringan yang berfungsi sebagai penerima notifikasi push. Terintegrasi dengan Firebase Cloud Messaging (FCM) untuk mengirimkan peringatan otomatis saat stok menipis atau terjadi mutasi barang.
-
+Many MSME operators still manage stock, transactions, and finances manually—using paper records or disconnected spreadsheets. This leads to inaccurate stock data, difficulty tracking profit/loss, and no early warning when stock runs low. An integrated system was needed to connect the web admin dashboard with mobile notifications in real-time.
 
 ---
 
-## Fitur Utama
+## Architecture and Approach
 
-- **Manajemen Stok & Supplier:** Pelacakan barang masuk, barang keluar, dan data supplier secara terstruktur.
-- **Point of Sales (POS) & Retur:** Pencatatan transaksi penjualan harian dan manajemen pengembalian barang.
-- **Pelacakan Keuangan:** Pencatatan pengeluaran dan pembuatan laporan laba/rugi otomatis yang dapat diekspor ke PDF.
-- **Notifikasi Push Real-time:** Peringatan otomatis ke aplikasi mobile saat stok barang menipis atau kritis melalui Firebase Cloud Messaging.
-- **Dashboard Admin:** Antarmuka web yang intuitif dan responsif untuk mengelola seluruh operasional bisnis.
+The system was built with two main interconnected components:
+
+- **Web Application (Laravel)** — RESTful API backend and admin dashboard using Laravel 12 with Laravel Blade and AdminLTE templates. All business logic (stock, transactions, financials) is processed server-side.
+- **Mobile Companion (Flutter)** — A lightweight mobile application serving as a push notification receiver. Integrated with Firebase Cloud Messaging (FCM) to send automated alerts when stock is running low or a goods mutation occurs.
+
+---
+
+## Key Features
+
+- **Stock & Supplier Management:** Structured tracking of incoming goods, outgoing goods, and supplier data.
+- **Point of Sales (POS) & Returns:** Recording daily sales transactions and managing product returns.
+- **Financial Tracking:** Expense recording and automatic profit/loss report generation exportable to PDF.
+- **Real-time Push Notifications:** Automatic alerts to the mobile app when stock is low or critical, via Firebase Cloud Messaging.
+- **Admin Dashboard:** An intuitive and responsive web interface to manage all business operations.
 
 ---
 
@@ -37,11 +36,11 @@ Sistem dibangun dengan dua komponen utama yang saling terhubung:
 - **Backend:** PHP, Laravel 12
 - **Web Frontend:** Laravel Blade, AdminLTE
 - **Mobile:** Flutter, Dart
-- **Notifikasi:** Firebase Cloud Messaging (FCM)
-- **Pelaporan:** barryvdh/laravel-dompdf (Export PDF)
+- **Notifications:** Firebase Cloud Messaging (FCM)
+- **Reporting:** barryvdh/laravel-dompdf (PDF Export)
 
 ---
 
-## Hasil dan Dampak
+## Results and Impact
 
-Sistem ini berhasil menghadirkan solusi bisnis nyata untuk UMKM dengan memadukan manajemen stok yang rapi, pelacakan keuangan otomatis, dan notifikasi mobile real-time. Pemilik usaha kini mendapatkan awareness instan mengenai kondisi bisnisnya — dari stok yang menipis hingga ringkasan laba/rugi — langsung dari smartphone mereka, tanpa perlu membuka laptop atau memeriksa catatan manual.
+The system successfully delivered a real-world business solution for MSMEs by combining organized stock management, automatic financial tracking, and real-time mobile notifications. Business owners now gain instant awareness of their business conditions—from low stock levels to profit/loss summaries—directly from their smartphones, without needing to open a laptop or check manual records.

@@ -1,33 +1,33 @@
-## Ringkasan
+## Summary
 
-Sistem penilaian digital berbasis web yang dirancang khusus untuk pertandingan olahraga bela diri Pencak Silat, menggantikan sistem pencatatan skor manual dengan kertas. Sistem ini memastikan kecepatan dan akurasi input skor dari para wasit secara real-time.
+A web-based digital scoring system designed specifically for Pencak Silat martial arts competitions, replacing the manual paper-based score recording system. The system ensures the speed and accuracy of score input from referees in real-time.
 
-**Peran:** Backend Developer
-
----
-
-## Tantangan
-
-Dalam pertandingan Pencak Silat, kecepatan dan akurasi input skor dari para wasit (juri) adalah hal mutlak. Jika sistem mengalami delay saat juri menekan tombol poin, hasil agregasi di layar utama (scoreboard) akan tertunda dan bisa memicu protes dari pelatih atau penonton. Selain itu, sistem manual berbasis kertas sangat rentan terhadap human error dan membutuhkan waktu rekapitulasi yang lama setelah pertandingan selesai.
+**Role:** Backend Developer
 
 ---
 
-## Arsitektur dan Pendekatan
+## Challenges
 
-Fokus utama proyek ini ada pada kehandalan Backend API yang mampu menangani ribuan request kecil (skor poin) per detiknya tanpa mengalami bottleneck.
-
-- **ExpressJS** digunakan sebagai framework server karena sifatnya yang non-blocking dan ringan untuk menangani request berfrekuensi tinggi.
-- **MySQL** sebagai basis data relasional untuk menjaga integritas data pertandingan, jadwal atlet, dan rekapitulasi poin akhir.
-- **REST API** dengan arsitektur yang rapi memungkinkan aplikasi juri (penginput skor) dan layar monitor penonton menerima pembaruan data secara konsisten.
+In Pencak Silat competitions, the speed and accuracy of score input from referees (judges) is paramount. If the system experiences a delay when a judge presses a point button, the aggregated results on the main screen (scoreboard) will lag and could trigger protests from coaches or spectators. Furthermore, the manual paper-based system is highly prone to human error and requires a long tabulation time after a match concludes.
 
 ---
 
-## Fitur Utama
+## Architecture and Approach
 
-- **Input Skor Real-time:** Antarmuka khusus untuk wasit/juri yang dioptimalkan agar setiap penekanan tombol langsung tersinkronisasi ke scoreboard utama.
-- **Manajemen Pertandingan:** Pengaturan jadwal, bracket, dan data atlet yang terstruktur dalam database relasional.
-- **Scoreboard Publik:** Layar monitor yang menampilkan skor terkini secara otomatis tanpa perlu refresh manual.
-- **Rekapitulasi Otomatis:** Sistem kalkulasi poin akhir yang menghilangkan kebutuhan rekapitulasi manual pasca pertandingan.
+The project's main focus was on building a reliable Backend API capable of handling thousands of small requests (point scores) per second without experiencing a bottleneck.
+
+- **ExpressJS** was used as the server framework for its non-blocking and lightweight nature, ideal for handling high-frequency requests.
+- **MySQL** as a relational database to maintain the integrity of match data, athlete schedules, and final point tabulations.
+- **REST API** with a clean architecture allows both the judge's application (score input) and the spectator monitor screen to receive consistent data updates.
+
+---
+
+## Key Features
+
+- **Real-time Score Input:** A dedicated interface for referees/judges, optimized so that every button press is immediately synchronized to the main scoreboard.
+- **Match Management:** Structured scheduling, bracket management, and athlete data stored in a relational database.
+- **Public Scoreboard:** A monitor screen that automatically displays the latest scores without the need for manual refresh.
+- **Automatic Tabulation:** A final point calculation system that eliminates the need for manual post-match tabulation.
 
 ---
 
@@ -35,10 +35,10 @@ Fokus utama proyek ini ada pada kehandalan Backend API yang mampu menangani ribu
 
 - **Backend:** Node.js, ExpressJS
 - **Database:** MySQL
-- **Arsitektur:** REST API
+- **Architecture:** REST API
 
 ---
 
-## Hasil dan Dampak
+## Results and Impact
 
-Sistem ini sukses digunakan secara langsung dalam turnamen lokal tanpa hambatan server (zero downtime). Transparansi penjurian meningkat secara signifikan karena skor ditampilkan secara real-time di layar publik, dan waktu rekapitulasi skor berkurang drastis dari hitungan jam menjadi instan.
+The system was successfully deployed live in a local tournament with zero server downtime. Judging transparency increased significantly as scores were displayed in real-time on the public screen, and score tabulation time was drastically reduced from hours to instant.
