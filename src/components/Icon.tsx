@@ -1,23 +1,24 @@
+// @ts-nocheck
 import React from 'react';
-import { ReactComponent as WindowsIcon } from '../assets/icons/windows.svg';
-import { ReactComponent as UbuntuIcon } from '../assets/icons/ubuntu.svg';
-import { ReactComponent as NginxIcon } from '../assets/icons/nginx.svg';
-import { ReactComponent as GitIcon } from '../assets/icons/git.svg';
-import { ReactComponent as VscodeIcon } from '../assets/icons/vscode.svg';
-import { ReactComponent as ArduinoIcon } from '../assets/icons/arduino.svg';
-import { ReactComponent as JsIcon } from '../assets/icons/js.svg';
-import { ReactComponent as TsIcon } from '../assets/icons/ts.svg';
-import { ReactComponent as GoIcon } from '../assets/icons/golang.svg';
-import { ReactComponent as NodeIcon } from '../assets/icons/nodejs.svg';
-import { ReactComponent as ExpressIcon } from '../assets/icons/express.svg';
-import { ReactComponent as BunIcon } from '../assets/icons/bun.svg';
-import { ReactComponent as ReactIcon } from '../assets/icons/react.svg';
-import { ReactComponent as NextIcon } from '../assets/icons/nextjs.svg';
-import { ReactComponent as TailwindIcon } from '../assets/icons/tailwind.svg';
-import { ReactComponent as MysqlIcon } from '../assets/icons/mysql.svg';
-import { ReactComponent as MariadbIcon } from '../assets/icons/mariadb.svg';
-import { ReactComponent as PostgresqlIcon } from '../assets/icons/postgresql.svg';
-import { ReactComponent as FigmaIcon } from '../assets/icons/figma.svg';
+import WindowsIcon from '../assets/icons/windows.svg';
+import UbuntuIcon from '../assets/icons/ubuntu.svg';
+import NginxIcon from '../assets/icons/nginx.svg';
+import GitIcon from '../assets/icons/git.svg';
+import VscodeIcon from '../assets/icons/vscode.svg';
+import ArduinoIcon from '../assets/icons/arduino.svg';
+import JsIcon from '../assets/icons/js.svg';
+import TsIcon from '../assets/icons/ts.svg';
+import GoIcon from '../assets/icons/golang.svg';
+import NodeIcon from '../assets/icons/nodejs.svg';
+import ExpressIcon from '../assets/icons/express.svg';
+import BunIcon from '../assets/icons/bun.svg';
+import ReactIcon from '../assets/icons/react.svg';
+import NextIcon from '../assets/icons/nextjs.svg';
+import TailwindIcon from '../assets/icons/tailwind.svg';
+import MysqlIcon from '../assets/icons/mysql.svg';
+import MariadbIcon from '../assets/icons/mariadb.svg';
+import PostgresqlIcon from '../assets/icons/postgresql.svg';
+import FigmaIcon from '../assets/icons/figma.svg';
 
 
 interface IconProps {

@@ -7,6 +7,7 @@ function NotFound() {
           <h1 className='text-white font-azaret text-3xl lg:text-5xl'>HanR</h1>
           <nav className="flex space-x-4">
             <Link to="/" className="text-white font-azaret text-lg lg:text-2xl list-none">Home</Link>
+            <Link to="/projects" className="text-white font-azaret text-lg lg:text-2xl list-none">Projects</Link>
             <Link to="/sandbox" className="text-white font-azaret text-lg lg:text-2xl list-none">Sandbox</Link>
           </nav>
         </header>
