@@ -1,0 +1,199 @@
+{
+  "journeys": [
+    {
+      "id": 1,
+      "role": "Freelance Full-Stack Developer",
+      "institution": "Self-Employed",
+      "period": "December 2022 – Present",
+      "description": "Managed Ubuntu servers (LEMP, Grafana) and full-stack deployments (PM2, Nginx). Designed and developed backend (Express, MySQL) & frontend (React, Next, React Native) architectures for IoT microsleep detectors, LMS, and other management applications."
+    },
+    {
+      "id": 2,
+      "role": "Research Assistant",
+      "institution": "IoT Laboratory Telkom University",
+      "period": "March 2024 – Jun 2026",
+      "description": "Progressed from NodeMCU Division to Web Dev Intern, and Coordinator Software for IoT. Managed on-site hardware integration, hybrid web platforms, and lab operations. Earned 'Sertif SG IoT' certification."
+    },
+    {
+      "id": 3,
+      "role": "Backend Developer Intern",
+      "institution": "CV. Interlink Network Indonesia",
+      "period": "June 2022 – December 2022",
+      "description": "Developed RESTful APIs using ExpressJS & MySQL. Built the company profile website using ReactJS. Managed Ubuntu 20.04 servers (LEMP stack)."
+    },
+    {
+      "id": 4,
+      "role": "Student",
+      "institution": "SMK Telkom Malang",
+      "period": "June 2020 – March 2023",
+      "description": "Developed various applications including library management systems, e-commerce platforms, hotel bookings, and laundry services using HTML, CSS, Native PHP, ReactJS, TailwindCSS, ExpressJS, and MySQL."
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "slug": "ehydrotel",
+      "title": "EHydroTel - Smart Hydroponic IoT",
+      "description": "An end-to-end smart IoT ecosystem designed to monitor, control, and automate hydroponic farming systems using microservices architecture.",
+      "tags": [
+        "Node.js",
+        "React.js",
+        "Prisma",
+        "MQTT",
+        "Socket.io"
+      ],
+      "thumbnail": "/banners/EHYD.png",
+      "role": "Backend & Frontend Web Developer",
+      "client": "IoT Laboratorium - Telkom University",
+      "background": "Automated hydroponic monitoring and control via IoT edge devices and a real-time dashboard platform.",
+      "impact": "Improved data querying performance and enabled 24/7 autonomous monitoring.",
+      "links": {
+        "github": "https://github.com/",
+        "live_demo": "#"
+      }
+    },
+    {
+      "id": 2,
+      "slug": "manajemen-chiller",
+      "title": "Chiller Management & Ice Cream Ordering",
+      "description": "An industrial asset management (chiller) and transaction system application. Delivered functional UI/UX through TailwindCSS slicing and efficient frontend state management.",
+      "tags": [
+        "ReactJS",
+        "TailwindCSS",
+        "REST API"
+      ],
+      "thumbnail": "/banners/CHIL.png",
+      "role": "Frontend Web Developer",
+      "client": "Indofood Ice Cream",
+      "background": "Digitalized chiller asset management and integrated ice cream ordering system for field agents.",
+      "impact": "Streamlined logistics tracking and drastically reduced manual ordering errors.",
+      "links": {
+        "github": "https://github.com/",
+        "live_demo": "#"
+      }
+    },
+    {
+      "id": 3,
+      "slug": "sistem-informasi-ukt",
+      "title": "UKT Pencak Silat Information System",
+      "description": "An integrated exam management platform (UKT) to digitalize registration, theory tests, and real-time practical assessments for martial arts.",
+      "tags": [
+        "Next.js",
+        "Express",
+        "Sequelize",
+        "Socket.io"
+      ],
+      "thumbnail": "/banners/SIUK.png",
+      "role": "Full-Stack Web Developer",
+      "client": "PSHT Cabang Trenggalek",
+      "background": "A comprehensive digital platform for managing belt promotion exams, from theory tests to live practical assessments.",
+      "impact": "Eliminated paper-based scoring and data entry bottlenecks for hundreds of students.",
+      "links": {
+        "github": "https://github.com/",
+        "live_demo": "#"
+      }
+    },
+    {
+      "id": 4,
+      "slug": "digital-scoring-pencak-silat",
+      "title": "Pencak Silat Digital Scoring",
+      "description": "A web-based digital scoring system for Pencak Silat matches. Designed the REST API backend architecture to ensure high accuracy and fast scoring input.",
+      "tags": [
+        "ExpressJS",
+        "MySQL",
+        "REST API"
+      ],
+      "thumbnail": "https://placehold.co/600x400/16213E/E94560?text=Pencak+Silat+Scoring",
+      "links": {
+        "github": "https://github.com/",
+        "live_demo": "#"
+      }
+    },
+    {
+      "id": 6,
+      "slug": "nadi-iot-drainage",
+      "title": "NADI - Smart IoT Drainage System",
+      "description": "An intelligent IoT hardware system using ESP32-CAM to monitor drainage capacity and provide early flood warnings via real-time telemetry.",
+      "tags": [
+        "C++",
+        "ESP32",
+        "MQTT",
+        "WebSockets"
+      ],
+      "thumbnail": "/banners/NADI.png",
+      "links": {
+        "github": "https://github.com/RazaqFarhanR/iot-drainage-esp32cam",
+        "live_demo": "#"
+      }
+    },
+    {
+      "id": 7,
+      "slug": "syarishop-ecommerce",
+      "title": "SyariShop - Modern E-Commerce Platform",
+      "description": "A scalable multi-app e-commerce platform with dedicated interfaces for Customers and Merchants, optimizing user experience and shop management.",
+      "tags": [
+        "Next.js",
+        "React",
+        "Tailwind CSS",
+        "React Query"
+      ],
+      "thumbnail": "/banners/SYAR.png",
+      "links": {
+        "github": "https://github.com/",
+        "live_demo": "#"
+      }
+    },
+    {
+      "id": 8,
+      "slug": "opd-planning-system",
+      "title": "OPD Planning & Monitoring API",
+      "description": "A RESTful API for digitalizing planning workflows, real-time performance indicator tracking, and secure evidence archiving for government agencies.",
+      "tags": [
+        "Node.js",
+        "Express",
+        "TypeScript",
+        "MongoDB",
+        "JWT"
+      ],
+      "thumbnail": "https://placehold.co/600x400/16213E/E94560?text=OPD+Planning+API",
+      "links": {
+        "github": "https://github.com/",
+        "live_demo": "#"
+      }
+    },
+    {
+      "id": 9,
+      "slug": "toko-telyu-ecommerce",
+      "title": "Toko Telyu - E-Commerce Mobile App",
+      "description": "A full-stack cross-platform e-commerce mobile application built with Flutter, featuring an AI chatbot and a real-time Firebase backend.",
+      "tags": [
+        "Flutter",
+        "Firebase",
+        "Generative AI",
+        "Cross-Platform"
+      ],
+      "thumbnail": "/banners/TELY.png",
+      "links": {
+        "github": "https://github.com/",
+        "live_demo": "#"
+      }
+    },
+    {
+      "id": 10,
+      "slug": "msme-management-system",
+      "title": "Integrated MSME Management System",
+      "description": "A comprehensive mini-ERP platform designed for MSMEs, combining a Laravel backend with a Flutter mobile app for real-time inventory and financial tracking.",
+      "tags": [
+        "Laravel",
+        "Flutter",
+        "PHP",
+        "Firebase"
+      ],
+      "thumbnail": "https://placehold.co/600x400/16213E/E94560?text=MSME+Management+System",
+      "links": {
+        "github": "https://github.com/",
+        "live_demo": "#"
+      }
+    }
+  ]
+}
