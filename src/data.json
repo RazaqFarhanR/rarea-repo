@@ -54,26 +54,6 @@
     },
     {
       "id": 2,
-      "slug": "manajemen-chiller",
-      "title": "Chiller Management & Ice Cream Ordering",
-      "description": "An industrial asset management (chiller) and transaction system application. Delivered functional UI/UX through TailwindCSS slicing and efficient frontend state management.",
-      "tags": [
-        "ReactJS",
-        "TailwindCSS",
-        "REST API"
-      ],
-      "thumbnail": "/banners/CHIL.png",
-      "role": "Frontend Web Developer",
-      "client": "Indofood Ice Cream",
-      "background": "Digitalized chiller asset management and integrated ice cream ordering system for field agents.",
-      "impact": "Streamlined logistics tracking and drastically reduced manual ordering errors.",
-      "links": {
-        "github": "https://github.com/",
-        "live_demo": "#"
-      }
-    },
-    {
-      "id": 3,
       "slug": "sistem-informasi-ukt",
       "title": "UKT Pencak Silat Information System",
       "description": "An integrated exam management platform (UKT) to digitalize registration, theory tests, and real-time practical assessments for martial arts.",
@@ -90,6 +70,27 @@
       "impact": "Eliminated paper-based scoring and data entry bottlenecks for hundreds of students.",
       "links": {
         "github": "https://github.com/",
+        "live_demo": "#"
+      }
+    },
+    {
+      "id": 3,
+      "slug": "nadi-iot-drainage",
+      "title": "NADI - Smart IoT Drainage System",
+      "description": "An intelligent IoT hardware system using ESP32-CAM to monitor drainage capacity and provide early flood warnings via real-time telemetry.",
+      "tags": [
+        "C++",
+        "ESP32",
+        "MQTT",
+        "WebSockets"
+      ],
+      "thumbnail": "/banners/NADI.png",
+      "role": "IoT Engineer",
+      "client": "Computing Project Team - Telkom University",
+      "background": "An intelligent IoT hardware system using ESP32-CAM to monitor drainage capacity and provide early flood warnings via real-time telemetry.",
+      "impact": "Early detection of flooding through automated water level monitoring and image analysis, providing real-time alerts to prevent potential disasters.",
+      "links": {
+        "github": "https://github.com/RazaqFarhanR/iot-drainage-esp32cam",
         "live_demo": "#"
       }
     },
@@ -111,23 +112,6 @@
     },
     {
       "id": 6,
-      "slug": "nadi-iot-drainage",
-      "title": "NADI - Smart IoT Drainage System",
-      "description": "An intelligent IoT hardware system using ESP32-CAM to monitor drainage capacity and provide early flood warnings via real-time telemetry.",
-      "tags": [
-        "C++",
-        "ESP32",
-        "MQTT",
-        "WebSockets"
-      ],
-      "thumbnail": "/banners/NADI.png",
-      "links": {
-        "github": "https://github.com/RazaqFarhanR/iot-drainage-esp32cam",
-        "live_demo": "#"
-      }
-    },
-    {
-      "id": 7,
       "slug": "syarishop-ecommerce",
       "title": "SyariShop - Modern E-Commerce Platform",
       "description": "A scalable multi-app e-commerce platform with dedicated interfaces for Customers and Merchants, optimizing user experience and shop management.",
@@ -144,7 +128,7 @@
       }
     },
     {
-      "id": 8,
+      "id": 7,
       "slug": "opd-planning-system",
       "title": "OPD Planning & Monitoring API",
       "description": "A RESTful API for digitalizing planning workflows, real-time performance indicator tracking, and secure evidence archiving for government agencies.",
@@ -162,7 +146,7 @@
       }
     },
     {
-      "id": 9,
+      "id": 8,
       "slug": "toko-telyu-ecommerce",
       "title": "Toko Telyu - E-Commerce Mobile App",
       "description": "A full-stack cross-platform e-commerce mobile application built with Flutter, featuring an AI chatbot and a real-time Firebase backend.",
@@ -179,7 +163,7 @@
       }
     },
     {
-      "id": 10,
+      "id": 9,
       "slug": "msme-management-system",
       "title": "Integrated MSME Management System",
       "description": "A comprehensive mini-ERP platform designed for MSMEs, combining a Laravel backend with a Flutter mobile app for real-time inventory and financial tracking.",

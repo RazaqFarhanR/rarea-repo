@@ -29,7 +29,7 @@ const ProjectCard = ({ project }: { project: any }) => {
       >
         <div className="card bg-[#16213E] rounded-xl" >
           <div className="card-front p-3 h-full flex flex-col relative">
-            <button 
+            <button
               onClick={handleFlip}
               className="absolute top-5 right-5 z-20 bg-[#1A1A2E]/80 border border-white/20 p-2 rounded-full text-white hover:text-[#E94560] active:scale-90 transition-all md:hidden"
               title="Flip Card"
@@ -63,7 +63,7 @@ const ProjectCard = ({ project }: { project: any }) => {
             </div>
           </div>
           <div className="card-back bg-[#1A1A2E] rounded-xl border-2 border-[#E94560] p-5 lg:p-6 flex flex-col justify-between h-full shadow-lg overflow-hidden relative">
-            <button 
+            <button
               onClick={handleFlip}
               className="absolute top-5 right-5 z-20 bg-[#16213E]/80 border border-[#E94560]/30 p-2 rounded-full text-white hover:text-[#E94560] active:scale-90 transition-all md:hidden"
               title="Flip Back"
@@ -80,7 +80,7 @@ const ProjectCard = ({ project }: { project: any }) => {
               </div>
 
               <div>
-                <h3 className="text-[#E94560] font-azaret text-xs uppercase tracking-widest font-bold mb-1">Client</h3>
+                <h3 className="text-[#E94560] font-azaret text-xs uppercase tracking-widest font-bold mb-1">Made With</h3>
                 <p className="text-white font-azaret text-sm lg:text-base font-semibold">{project.client}</p>
               </div>
 
@@ -198,7 +198,7 @@ function App() {
           <div className="grid gap-6 relative after:rounded-xl after:w-1 md:after:w-4 after:absolute after:bg-[#16213E] after:h-full after:top-0 after:left-[28px] after:-ml-[2px] md:after:left-1/2 md:after:-ml-[8px]">
             {portfolioData.journeys.map((item, index) => {
               const getIcon = (id: number) => {
-                switch(id) {
+                switch (id) {
                   case 1: // Freelance
                     return (
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5 md:w-7 md:h-7 text-[#E94560]">
